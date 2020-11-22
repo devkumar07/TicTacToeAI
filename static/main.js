@@ -69,6 +69,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -97,6 +111,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -125,6 +153,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -153,6 +195,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -181,6 +237,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -209,6 +279,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -237,6 +321,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -265,6 +363,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)
@@ -293,6 +405,20 @@ $(document).ready(function(){
                 });
                 var data = JSON.parse(result);
                 updateBoard(data);
+                $.get("/AImove",{},function(response){
+                    var data = JSON.parse(response);
+                    updateBoard(data);
+                    $.get("/game_status",function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#game_status").html(message);
+                    });
+                    $.get("/status",{},function(response){
+                        var data = JSON.parse(response);
+                        var message = data["result"];
+                        $("#status").html(message);
+                    });
+                });
             },
             error: function(err){
                 alert(location)

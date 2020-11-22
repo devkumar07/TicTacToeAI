@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from Board import *
+from board import *
 from Cell import *
 import json
 app = Flask(__name__) 
@@ -24,20 +24,27 @@ def init():
 @app.route('/game_status', methods = ['GET','POST'])
 def g_status():
     result = game.find_winner()
-    if result != '':
-        return json.dumps({"result": result + "has won the game"})
-    return json.dumps(result)
+    if result == 'Tie':
+        return json.dumps({"result": "It is a Tie"})
+    elif result == 'X' or result == 'O':
+        return json.dumps({"result": result+" has won the game!"})
+    return json.dumps({"result": "State: Game in progress!"})
 
 @app.route('/status', methods = ['GET','POST'])
 def status():
     result = game.get_turn()
-    return json.dumps({"result": result + "plays now"})
+    return json.dumps({"result": result + " plays now"})
+
+@app.route('/AImove', methods = ['GET','POST'])
+def moveAI():
+    game.AIMove()
+    result = game.get_table()
+    return json.dumps(result)
 
 @app.route('/click', methods = ['GET','POST'])
 def click():
     if request.method == "POST":
         data = request.json
-        print(data)
         x = int(data['row'])
         y = int(data['col'])
         game.update_cell(x,y)
